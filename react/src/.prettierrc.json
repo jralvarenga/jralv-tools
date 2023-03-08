@@ -1,0 +1,6 @@
+{
+  "singleQuote": true,
+  "semi": false,
+  "import/prefer-default-export": false,
+  "import/no-unresolved": false
+}
