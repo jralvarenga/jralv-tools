@@ -1,1 +1,5 @@
 export { useKeyPress } from './useKeyPress'
+export { useInterval } from './useInterval'
+export { useOutsideComponentClick } from './useOutsideComponentClick'
+export { useWindowDimensions } from './useWindowDimensions'
+export { useTimeout } from './useTimeout'

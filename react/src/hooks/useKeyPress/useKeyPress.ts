@@ -9,15 +9,18 @@ import { useCallback, useEffect } from 'react'
  *  console.log('Perform an action')
  * }, 27) // 27 is esc key
  */
-export default function useKeyPress (callback: Function, keyCode: number): void {
+export default function useKeyPress(callback: () => void, keyCode: number): void {
   /**
    * Handles keyboard event and callback
    */
-  const keyPressEventHandler = useCallback((event: KeyboardEvent) => {
-    if (event.keyCode === keyCode) {
-      callback()
-    }
-  }, [keyCode])
+  const keyPressEventHandler = useCallback(
+    (event: KeyboardEvent) => {
+      if (event.keyCode === keyCode) {
+        callback()
+      }
+    },
+    [keyCode]
+  )
 
   useEffect(() => {
     // Adding event listener
